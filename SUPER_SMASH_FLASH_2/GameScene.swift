@@ -17,7 +17,7 @@ class GameScene: SKScene {
         platform.size = CGSize(width: 1400, height: 40)
         
         player.physicsBody?.collisionBitMask = 500
-        platform.physicsBody?.collisionBitMask = 500
+        platform.physicsBody?.collisionBitMask = 30
         
         platform.color = .black
         buildplayer(Atlas: "LLOYD_IDLE")
