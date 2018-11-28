@@ -19,11 +19,11 @@
 		541D091D21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */; };
 		543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C003821AF0765009B78A7 /* Map Loading Framework.swift */; };
 		543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C003B21AF0806009B78A7 /* Launch Screen.storyboard */; };
-		543C003E21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */; };
-		543C004021AF1641009B78A7 /* L_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */; };
+		54529AEF21AF2D9D008E3176 /* L_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */; };
+		54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */; };
+		54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */; };
+		54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */; };
 		5456A9DB21A5D89400806094 /* Animation Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456A9DA21A5D89400806094 /* Animation Extension.swift */; };
-		5456A9DD21A5DB8B00806094 /* R_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */; };
-		54E2CA1321AC57100079C72F /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */; };
 		54FF04C821A72847003CD040 /* P2PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF04C721A72847003CD040 /* P2PService.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +63,11 @@
 		541D091E21A3208500B5F518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		543C003821AF0765009B78A7 /* Map Loading Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Loading Framework.swift"; sourceTree = "<group>"; };
 		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
-		543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_WALK.atlas; sourceTree = "<group>"; };
+		54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
+		54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
+		54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_WALK.atlas; sourceTree = "<group>"; };
+		54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
 		5456A9DA21A5D89400806094 /* Animation Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Extension.swift"; sourceTree = "<group>"; };
-		5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
-		54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		54FF04C721A72847003CD040 /* P2PService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +103,10 @@
 				541D091021A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests */,
 				541D091B21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests */,
 				541D08F421A3208200B5F518 /* Products */,
-				543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */,
-				543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */,
-				54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */,
-				5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */,
+				54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */,
+				54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */,
+				54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */,
+				54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,16 +270,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5456A9DD21A5DB8B00806094 /* R_LLOYD_WALK.atlas in Resources */,
+				54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
-				543C004021AF1641009B78A7 /* L_LLOYD_WALK.atlas in Resources */,
-				543C003E21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas in Resources */,
 				543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */,
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
-				54E2CA1321AC57100079C72F /* R_LLOYD_IDLE.atlas in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
+				54529AEF21AF2D9D008E3176 /* L_LLOYD_IDLE.atlas in Resources */,
+				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
+				54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38USN3E3H5;
 				INFOPLIST_FILE = SUPER_SMASH_FLASH_2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,6 +506,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38USN3E3H5;
 				INFOPLIST_FILE = SUPER_SMASH_FLASH_2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -21,7 +21,7 @@ private var playerWalkingFrames: [SKTexture] = []
         platform.physicsBody?.collisionBitMask = 30
         
         platform.color = .black
-        buildplayer(Atlas: "LLOYD_IDLE")
+        buildplayer(Atlas: "R_LLOYD_IDLE")
         animateplayer()
     //    player.physicsBody = SKPhysicsBody()
     
@@ -60,7 +60,7 @@ var touch = false
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        player.StrafeLeft()
+        player.StrafeRight()
         
         for _ in touches {}
         touch = true
@@ -77,7 +77,7 @@ var touch = false
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         lastposition = player.position
         player.removeFromParent()
-        buildplayer(Atlas: "LLOYD_IDLE")
+        buildplayer(Atlas: "R_LLOYD_IDLE")
         animateplayer()
         self.addChild(player)
         player.position = lastposition
@@ -87,7 +87,7 @@ var touch = false
     
     override func update(_ currentTime: TimeInterval) {
         if (touch) {
-            player.position = CGPoint(x: Int(player.position.x) + 1, y: 0)
+            player.position = CGPoint(x: Int(player.position.x) + 1, y: Int(player.position.y))
         } else {
             
         }
@@ -107,17 +107,12 @@ extension GameScene : ColorServiceDelegate {
         OperationQueue.main.addOperation {
             switch colorString {
             case "true":
+                self.backgroundColor = .red
                 self.touch = true
-                 self.player.removeFromParent()
-                self.buildplayer(Atlas: "LLOYD_WALK")
-                self.animateplayer()
-                self.self.addChild(self.player)
+                 self.player.StrafeRight()
             case "false":
                 self.touch = false
-                self.player.removeFromParent()
-                self.buildplayer(Atlas: "LLOYD_IDLE")
-                self.animateplayer()
-                self.self.addChild(self.player)
+                self.player.IdleRight()
                 
             default:
                 NSLog("%@", "Unknown color value received: \(colorString)")

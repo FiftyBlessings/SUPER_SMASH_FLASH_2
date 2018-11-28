@@ -33,7 +33,7 @@ func animateplayer() {
         let lastposition = self.position
         let parent: SKNode = self.parent!
         self.removeFromParent()
-        buildplayer(Atlas: "LLOYD_WALK")
+        buildplayer(Atlas: "L_LLOYD_WALK")
         animateplayer()
         parent.addChild(self)
         self.position = lastposition
@@ -43,7 +43,7 @@ func animateplayer() {
         let lastposition = self.position
         let parent: SKNode = self.parent!
         self.removeFromParent()
-        buildplayer(Atlas: "LLOYD_WALK")
+        buildplayer(Atlas: "R_LLOYD_WALK")
         animateplayer()
         parent.addChild(self)
         self.position = lastposition
@@ -64,6 +64,26 @@ func animateplayer() {
         let parent: SKNode = self.parent!
         self.removeFromParent()
         buildplayer(Atlas: "LLOYD_WALK")
+        animateplayer()
+        parent.addChild(self)
+        self.position = lastposition
+        print("This Code Is Being Executed")
+    }
+    func IdleLeft() {
+        let lastposition = self.position
+        let parent: SKNode = self.parent!
+        self.removeFromParent()
+        buildplayer(Atlas: "L_LLOYD_IDLE")
+        animateplayer()
+        parent.addChild(self)
+        self.position = lastposition
+        print("This Code Is Being Executed")
+    }
+    func IdleRight() {
+        let lastposition = self.position
+        let parent: SKNode = self.parent!
+        self.removeFromParent()
+        buildplayer(Atlas: "R_LLOYD_IDLE")
         animateplayer()
         parent.addChild(self)
         self.position = lastposition
