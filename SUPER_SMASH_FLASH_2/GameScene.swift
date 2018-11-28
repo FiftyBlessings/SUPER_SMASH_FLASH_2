@@ -2,10 +2,11 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-   var player = SKSpriteNode()
-    var platform = SKSpriteNode()
-    let colorService = ColorService()
-    private var playerWalkingFrames: [SKTexture] = []
+var player = SKSpriteNode()
+var platform = SKSpriteNode()
+let colorService = ColorService()
+
+private var playerWalkingFrames: [SKTexture] = []
     
     override func didMove(to view: SKView) {
         backgroundColor = .white
@@ -22,7 +23,7 @@ class GameScene: SKScene {
         platform.color = .black
         buildplayer(Atlas: "LLOYD_IDLE")
         animateplayer()
-        player.physicsBody = SKPhysicsBody()
+    //    player.physicsBody = SKPhysicsBody()
     
         addChild(player)
         player.position = CGPoint(x: 250, y:100)
@@ -53,13 +54,13 @@ class GameScene: SKScene {
                  withKey:"walkingInPlaceplayer")
     }
 var touch = false
+    
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lastposition = player.position
-        player.removeFromParent()
-        buildplayer(Atlas: "LLOYD_WALK")
-        animateplayer()
-        self.addChild(player)
-        player.position = lastposition
+        
+        player.StrafeLeft()
         
         for _ in touches {}
         touch = true

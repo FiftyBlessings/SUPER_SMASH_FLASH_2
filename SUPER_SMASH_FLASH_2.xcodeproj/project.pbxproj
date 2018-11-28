@@ -17,9 +17,13 @@
 		541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541D090521A3208400B5F518 /* LaunchScreen.storyboard */; };
 		541D091221A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091121A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift */; };
 		541D091D21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */; };
+		543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C003821AF0765009B78A7 /* Map Loading Framework.swift */; };
+		543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C003B21AF0806009B78A7 /* Launch Screen.storyboard */; };
+		543C003E21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */; };
+		543C004021AF1641009B78A7 /* L_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */; };
 		5456A9DB21A5D89400806094 /* Animation Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456A9DA21A5D89400806094 /* Animation Extension.swift */; };
-		5456A9DD21A5DB8B00806094 /* LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5456A9DC21A5DB8B00806094 /* LLOYD_WALK.atlas */; };
-		54E2CA1321AC57100079C72F /* LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54E2CA1221AC57100079C72F /* LLOYD_IDLE.atlas */; };
+		5456A9DD21A5DB8B00806094 /* R_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */; };
+		54E2CA1321AC57100079C72F /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */; };
 		54FF04C821A72847003CD040 /* P2PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF04C721A72847003CD040 /* P2PService.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +61,13 @@
 		541D091821A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUPER_SMASH_FLASH_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPER_SMASH_FLASH_2UITests.swift; sourceTree = "<group>"; };
 		541D091E21A3208500B5F518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		543C003821AF0765009B78A7 /* Map Loading Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Loading Framework.swift"; sourceTree = "<group>"; };
+		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
+		543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_WALK.atlas; sourceTree = "<group>"; };
 		5456A9DA21A5D89400806094 /* Animation Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Extension.swift"; sourceTree = "<group>"; };
-		5456A9DC21A5DB8B00806094 /* LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = LLOYD_WALK.atlas; sourceTree = "<group>"; };
-		54E2CA1221AC57100079C72F /* LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = LLOYD_IDLE.atlas; sourceTree = "<group>"; };
+		5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
+		54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		54FF04C721A72847003CD040 /* P2PService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,13 +99,14 @@
 		541D08EA21A3208200B5F518 = {
 			isa = PBXGroup;
 			children = (
-				54FF04C721A72847003CD040 /* P2PService.swift */,
 				541D08F521A3208200B5F518 /* SUPER_SMASH_FLASH_2 */,
 				541D091021A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests */,
 				541D091B21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests */,
 				541D08F421A3208200B5F518 /* Products */,
-				54E2CA1221AC57100079C72F /* LLOYD_IDLE.atlas */,
-				5456A9DC21A5DB8B00806094 /* LLOYD_WALK.atlas */,
+				543C003F21AF1641009B78A7 /* L_LLOYD_WALK.atlas */,
+				543C003D21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas */,
+				54E2CA1221AC57100079C72F /* R_LLOYD_IDLE.atlas */,
+				5456A9DC21A5DB8B00806094 /* R_LLOYD_WALK.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +127,7 @@
 				541D08F821A3208200B5F518 /* GameScene.sks */,
 				541D08FA21A3208200B5F518 /* Actions.sks */,
 				541D08FC21A3208200B5F518 /* GameScene.swift */,
-				5456A9DA21A5D89400806094 /* Animation Extension.swift */,
+				543C003A21AF07A2009B78A7 /* Engine */,
 				541D08FE21A3208200B5F518 /* GameViewController.swift */,
 				541D090021A3208200B5F518 /* Main.storyboard */,
 				541D090321A3208400B5F518 /* Assets.xcassets */,
@@ -144,6 +153,17 @@
 				541D091E21A3208500B5F518 /* Info.plist */,
 			);
 			path = SUPER_SMASH_FLASH_2UITests;
+			sourceTree = "<group>";
+		};
+		543C003A21AF07A2009B78A7 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				543C003821AF0765009B78A7 /* Map Loading Framework.swift */,
+				5456A9DA21A5D89400806094 /* Animation Extension.swift */,
+				54FF04C721A72847003CD040 /* P2PService.swift */,
+				543C003B21AF0806009B78A7 /* Launch Screen.storyboard */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +270,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5456A9DD21A5DB8B00806094 /* LLOYD_WALK.atlas in Resources */,
+				5456A9DD21A5DB8B00806094 /* R_LLOYD_WALK.atlas in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
+				543C004021AF1641009B78A7 /* L_LLOYD_WALK.atlas in Resources */,
+				543C003E21AF15DA009B78A7 /* L_LLOYD_IDLE.atlas in Resources */,
+				543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */,
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
-				54E2CA1321AC57100079C72F /* LLOYD_IDLE.atlas in Resources */,
+				54E2CA1321AC57100079C72F /* R_LLOYD_IDLE.atlas in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
 			);
@@ -285,6 +308,7 @@
 				541D08FD21A3208200B5F518 /* GameScene.swift in Sources */,
 				5456A9DB21A5D89400806094 /* Animation Extension.swift in Sources */,
 				541D08FF21A3208200B5F518 /* GameViewController.swift in Sources */,
+				543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */,
 				541D08F721A3208200B5F518 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
