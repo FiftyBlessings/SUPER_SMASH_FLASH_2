@@ -13,7 +13,7 @@ extension SKSpriteNode {
     
     let numImages = playerAnimatedAtlas.textureNames.count
     for i in 1...numImages {
-        let playerTextureName = "\(Atlas)\(i)"
+        let playerTextureName = ("\(Atlas)\(i)")
         walkFrames.append(playerAnimatedAtlas.textureNamed(playerTextureName))
     }
     playerWalkingFrames = walkFrames

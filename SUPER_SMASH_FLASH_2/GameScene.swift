@@ -5,11 +5,21 @@ class GameScene: SKScene {
 var player = SKSpriteNode()
 var platform = SKSpriteNode()
 let colorService = ColorService()
-
+    
+    var N = SKSpriteNode()
+    var  S = SKSpriteNode()
+    var E = SKSpriteNode()
+    var W = SKSpriteNode()
+    var NE = SKSpriteNode()
+    var SE = SKSpriteNode()
+    var NW = SKSpriteNode()
+    var SW = SKSpriteNode()
+    
 private var playerWalkingFrames: [SKTexture] = []
     
     override func didMove(to view: SKView) {
         backgroundColor = .white
+        colorService.delegate = self
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -4.8)
         platform.position = CGPoint(x: 50, y: 0)
@@ -55,12 +65,17 @@ private var playerWalkingFrames: [SKTexture] = []
     }
 var touch = false
     
-    
+    func moveto(_ dircection: CGPoint) {
+        
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        player.StrafeRight()
+        let touchlocation = touches.first?.location(in: self)
+        if let node = self.nodes(at: touchlocation!).first {
+            moveto(node)
+        }
         
         for _ in touches {}
         touch = true
@@ -82,6 +97,7 @@ var touch = false
         self.addChild(player)
         player.position = lastposition
         touch = false
+        colorService.send(colorName: "false")
     }
     var lastposition: CGPoint = CGPoint(x: 0, y: 0)
     
@@ -95,32 +111,7 @@ var touch = false
     
 }
 
-extension GameScene : ColorServiceDelegate {
-    
-    func connectedDevicesChanged(manager: ColorService, connectedDevices: [String]) {
-        OperationQueue.main.addOperation {
-  
-        }
-    }
-    
-    func colorChanged(manager: ColorService, colorString: String) {
-        OperationQueue.main.addOperation {
-            switch colorString {
-            case "true":
-                self.backgroundColor = .red
-                self.touch = true
-                 self.player.StrafeRight()
-            case "false":
-                self.touch = false
-                self.player.IdleRight()
-                
-            default:
-                NSLog("%@", "Unknown color value received: \(colorString)")
-            }
-        }
-    }
-    
-}
+
 
 
 
