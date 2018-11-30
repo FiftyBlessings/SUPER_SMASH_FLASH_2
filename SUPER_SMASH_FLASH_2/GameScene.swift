@@ -1,43 +1,68 @@
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene , SKPhysicsContactDelegate {
+    let playerCategory: UInt32 = 0x1 << 0
+    let platformCategory: UInt32 = 0x1 << 1
     
 var player = SKSpriteNode()
 var platform = SKSpriteNode()
 let colorService = ColorService()
-    
-    var N = SKSpriteNode()
-    var  S = SKSpriteNode()
-    var E = SKSpriteNode()
-    var W = SKSpriteNode()
-    var NE = SKSpriteNode()
-    var SE = SKSpriteNode()
-    var NW = SKSpriteNode()
-    var SW = SKSpriteNode()
+    var DP_N = SKSpriteNode()
+    var DP_NE = SKSpriteNode()
+    var DP_NW = SKSpriteNode()
+    var DP_E = SKSpriteNode()
+    var DP_SE = SKSpriteNode()
+    var DP_S = SKSpriteNode()
+    var DP_SW = SKSpriteNode()
+    var  DP_W = SKSpriteNode()
+    var Direction = "NONE"
     
 private var playerWalkingFrames: [SKTexture] = []
     
     override func didMove(to view: SKView) {
         backgroundColor = .white
         colorService.delegate = self
+        physicsWorld.contactDelegate = self
+        
+         DP_N = self.childNode(withName: "DPAD_N") as! SKSpriteNode
+         DP_NE = self.childNode(withName: "DPAD_NE") as! SKSpriteNode
+         DP_NW = self.childNode(withName: "DPAD_NW") as! SKSpriteNode
+         DP_E = self.childNode(withName: "DPAD_E") as! SKSpriteNode
+         DP_SE = self.childNode(withName: "DPAD_SE") as! SKSpriteNode
+         DP_S = self.childNode(withName: "DPAD_S") as! SKSpriteNode
+         DP_SW = self.childNode(withName: "DPAD_SW") as! SKSpriteNode
+         DP_W = self.childNode(withName: "DPAD_W") as! SKSpriteNode
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -4.8)
-        platform.position = CGPoint(x: 50, y: 0)
-       platform.physicsBody = SKPhysicsBody()
-        platform.physicsBody?.affectedByGravity = false
-        platform.size = CGSize(width: 1400, height: 40)
-        
-        player.physicsBody?.collisionBitMask = 500
-        platform.physicsBody?.collisionBitMask = 30
+
         
         platform.color = .black
         buildplayer(Atlas: "R_LLOYD_IDLE")
         animateplayer()
-    //    player.physicsBody = SKPhysicsBody()
+ 
+        platform.position = CGPoint(x: 368, y: -40.5)
+        platform.size = CGSize(width: 736, height: 100)
+        platform.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1500, height: 40))
+        platform.physicsBody?.restitution = 1.1
+        platform.physicsBody?.affectedByGravity = false
+        platform.physicsBody?.allowsRotation = false
+        platform.physicsBody?.pinned = true
+        
+        
+        addChild(platform)
     
         addChild(player)
+        player.physicsBody = SKPhysicsBody()
+        player.physicsBody?.affectedByGravity = true
+        player.physicsBody?.collisionBitMask = 4294967295
+    player.physicsBody?.categoryBitMask = 4294967295
         player.position = CGPoint(x: 250, y:100)
-        addChild(platform)
+        
+        platform.physicsBody?.categoryBitMask = platformCategory
+        player.physicsBody?.collisionBitMask = platformCategory
+        
+        player.physicsBody?.categoryBitMask = playerCategory
+        platform.physicsBody?.contactTestBitMask = playerCategory
     }
     func buildplayer(Atlas: String) {
         let playerAnimatedAtlas = SKTextureAtlas(named: Atlas)
@@ -74,6 +99,15 @@ var touch = false
         
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
+            if node == DP_E{
+                touch = true
+                Direction = "RIGHT"
+                player.StrafeRight()
+            } else if node == DP_W {
+                touch = true
+                Direction = "LEFT"
+                player.StrafeLeft()
+            }
     
         }
         
@@ -90,22 +124,23 @@ var touch = false
         
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lastposition = player.position
-        player.removeFromParent()
-        buildplayer(Atlas: "R_LLOYD_IDLE")
-        animateplayer()
-        self.addChild(player)
-        player.position = lastposition
-        touch = false
+        if Direction == "LEFT" {
+            player.IdleLeft()
+        } else if Direction == "RIGHT" {
+            player.IdleRight()
+        }
+        Direction = "NONE"
         colorService.send(colorName: "false")
     }
     var lastposition: CGPoint = CGPoint(x: 0, y: 0)
     
     override func update(_ currentTime: TimeInterval) {
-        if (touch) {
+        if Direction == "RIGHT"{
             player.position = CGPoint(x: Int(player.position.x) + 1, y: Int(player.position.y))
-        } else {
-            
+        } else if Direction == "LEFT"{
+            player.position = CGPoint(x: Int(player.position.x) - 1, y: Int(player.position.y))
+        } else if Direction == "NONE"{
+            player.position = CGPoint(x: Int(player.position.x) + 0 , y: Int(player.position.y))
         }
     }
     
