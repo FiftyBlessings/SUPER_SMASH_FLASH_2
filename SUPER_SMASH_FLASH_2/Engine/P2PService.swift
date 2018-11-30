@@ -7,17 +7,17 @@ protocol ColorServiceDelegate {
     func colorChanged(manager : ColorService, colorString: String)
     
 }
-
+//The MCNearbyServiceAdvertiser class publishes an advertisement for a specific service that your app provides through the Multipeer Connectivity framework and notifies its delegate about invitations from nearby peers
 class ColorService : NSObject {
     
-    // Service type must be a unique string, at most 15 characters long
-    // and can contain only ASCII lowercase letters, numbers and hyphens.
+/* Service type must be a unique string, at most 15 characters long and can contain only ASCII lowercase letters, numbers and hyphens. The serviceType parameter is a short text string used to describe the app's networking protocol */
     private let ColorServiceType = "example-color"
-    
+    //This line makes the persons "username" the name of the device they are using
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
+    //The MCNearbyServiceAdvertiser class publishes an advertisement for a specific service that your app provides through the Multipeer Connectivity framework and notifies its delegate about invitations from nearby peers
     private let serviceAdvertiser : MCNearbyServiceAdvertiser
     private let serviceBrowser : MCNearbyServiceBrowser
-    
+    // The delegate object that handles advertising-related events
     var delegate : ColorServiceDelegate?
     
     lazy var session : MCSession = {
@@ -31,15 +31,16 @@ class ColorService : NSObject {
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: ColorServiceType)
         
         super.init()
-        
+        // Begins advertising the service provided by a local peer
         self.serviceAdvertiser.delegate = self
         self.serviceAdvertiser.startAdvertisingPeer()
-        
+        // Begins advertising the browser provided by a local peer
         self.serviceBrowser.delegate = self
         self.serviceBrowser.startBrowsingForPeers()
     }
     
     deinit {
+        // Stops advertising the service provided by a local peer and the browser for local peers
         self.serviceAdvertiser.stopAdvertisingPeer()
         self.serviceBrowser.stopBrowsingForPeers()
     }
@@ -61,11 +62,11 @@ class ColorService : NSObject {
 }
 
 extension ColorService : MCNearbyServiceAdvertiserDelegate {
-    
+    // This is called when the advertisement fails which in this case will print to the log "didNotStartAdvertisingPeer: \(error)" which is the error code provided by xocde. Advertiser: The advertiser object that failed to begin advertising. Error: An error object that indicates what went wrong.
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
         NSLog("%@", "didNotStartAdvertisingPeer: \(error)")
     }
-    
+    // Called when an invatation to join a session is received from a nearby peer. Advertiser: The advertiser object that was invited to join the session. PeerID: The peer ID of the nearby peer that invited your app to join the session. Context: An arbitrary piece of data received from the nearby peer. This can be used to provide further information to the user about the nature of the invitation. InvitationHandler: A block that your code must call to indicate whether the advertiser should accept or decline the invitation, and to provide a session with which to associate the peer that sent the invitation.
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         NSLog("%@", "didReceiveInvitationFromPeer \(peerID)")
         invitationHandler(true, self.session)
@@ -78,7 +79,7 @@ extension ColorService : MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
         NSLog("%@", "didNotStartBrowsingForPeers: \(error)")
     }
-    
+    /* The Discovery info here is a dictonary that will display the a string as the info */
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         NSLog("%@", "foundPeer: \(peerID)")
         NSLog("%@", "invitePeer: \(peerID)")
