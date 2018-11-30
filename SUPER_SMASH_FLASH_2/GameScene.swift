@@ -74,7 +74,7 @@ var touch = false
         
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
-            moveto(node)
+    
         }
         
         for _ in touches {}
