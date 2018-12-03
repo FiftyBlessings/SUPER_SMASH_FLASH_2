@@ -52,17 +52,15 @@ private var playerWalkingFrames: [SKTexture] = []
         addChild(platform)
     
         addChild(player)
-        player.physicsBody = SKPhysicsBody()
+       player.physicsBody = SKPhysicsBody(circleOfRadius: (player.size.width)/2)
         player.physicsBody?.affectedByGravity = true
-        player.physicsBody?.collisionBitMask = 4294967295
-    player.physicsBody?.categoryBitMask = 4294967295
-        player.position = CGPoint(x: 250, y:100)
+  
+        player.position = CGPoint(x: 500, y:200)
+        player.physicsBody?.friction = 1000
+        player.physicsBody?.restitution = 0
+        platform.physicsBody?.restitution = 0
         
-        platform.physicsBody?.categoryBitMask = platformCategory
-        player.physicsBody?.collisionBitMask = platformCategory
-        
-        player.physicsBody?.categoryBitMask = playerCategory
-        platform.physicsBody?.contactTestBitMask = playerCategory
+      
     }
     func buildplayer(Atlas: String) {
         let playerAnimatedAtlas = SKTextureAtlas(named: Atlas)
@@ -107,6 +105,19 @@ var touch = false
                 touch = true
                 Direction = "LEFT"
                 player.StrafeLeft()
+            } else if node == DP_N {
+                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
+            } else if node == DP_NE {
+                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
+                touch = true
+                Direction = "RIGHT"
+            } else if node == DP_NW {
+                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
+                touch = true
+                Direction = "LEFT"
             }
     
         }
@@ -136,11 +147,12 @@ var touch = false
     
     override func update(_ currentTime: TimeInterval) {
         if Direction == "RIGHT"{
-            player.position = CGPoint(x: Int(player.position.x) + 1, y: Int(player.position.y))
+            player.run(SKAction.move(by: CGVector(dx: 3, dy: 0), duration: 0.1))
+            print ("YEET")
         } else if Direction == "LEFT"{
-            player.position = CGPoint(x: Int(player.position.x) - 1, y: Int(player.position.y))
-        } else if Direction == "NONE"{
-            player.position = CGPoint(x: Int(player.position.x) + 0 , y: Int(player.position.y))
+           player.run(SKAction.move(by: CGVector(dx: -3, dy: 0), duration: 0.1))
+        } else if Direction == "UP"{
+            
         }
     }
     
