@@ -19,7 +19,6 @@
 		541D091D21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */; };
 		543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C003821AF0765009B78A7 /* Map Loading Framework.swift */; };
 		543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C003B21AF0806009B78A7 /* Launch Screen.storyboard */; };
-		54529AEF21AF2D9D008E3176 /* L_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */; };
 		54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */; };
 		54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */; };
 		54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */; };
@@ -65,7 +64,6 @@
 		541D091E21A3208500B5F518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		543C003821AF0765009B78A7 /* Map Loading Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Loading Framework.swift"; sourceTree = "<group>"; };
 		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_WALK.atlas; sourceTree = "<group>"; };
 		54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
@@ -73,6 +71,7 @@
 		54529AF521B1A726008E3176 /* D-Pad Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "D-Pad Extension.swift"; sourceTree = "<group>"; };
 		5456A9DA21A5D89400806094 /* Animation Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Extension.swift"; sourceTree = "<group>"; };
 		54FF04C721A72847003CD040 /* P2PService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
+		72EF56B221B6FA1A0010FD4E /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +106,7 @@
 				541D091021A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests */,
 				541D091B21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests */,
 				541D08F421A3208200B5F518 /* Products */,
-				54529AEB21AF2D9C008E3176 /* L_LLOYD_IDLE.atlas */,
-				54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */,
-				54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */,
-				54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */,
+				541D090821A3208400B5F518 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,8 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				543C003A21AF07A2009B78A7 /* Engine */,
-				541D090321A3208400B5F518 /* Assets.xcassets */,
-				541D090821A3208400B5F518 /* Info.plist */,
 			);
 			path = SUPER_SMASH_FLASH_2;
 			sourceTree = "<group>";
@@ -160,7 +154,9 @@
 				72EF56AA21B6EBC30010FD4E /* Map */,
 				72EF56AC21B6EC050010FD4E /* Extensions */,
 				72EF56A921B6EB860010FD4E /* Multipeer */,
+				72EF56AE21B6F9980010FD4E /* Atlas's */,
 				72EF56AD21B6F7740010FD4E /* Storyboard */,
+				541D090321A3208400B5F518 /* Assets.xcassets */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -210,6 +206,65 @@
 				541D090021A3208200B5F518 /* Main.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		72EF56AE21B6F9980010FD4E /* Atlas's */ = {
+			isa = PBXGroup;
+			children = (
+				72EF56B621B6FAD70010FD4E /* Fox */,
+				72EF56B521B6FAA20010FD4E /* Samsus */,
+				72EF56B421B6FA670010FD4E /* Goku */,
+				72EF56AF21B6F9CB0010FD4E /* Lloyd */,
+			);
+			name = "Atlas's";
+			sourceTree = "<group>";
+		};
+		72EF56AF21B6F9CB0010FD4E /* Lloyd */ = {
+			isa = PBXGroup;
+			children = (
+				72EF56B321B6FA280010FD4E /* Walk */,
+				72EF56B121B6FA0F0010FD4E /* Idle */,
+			);
+			name = Lloyd;
+			sourceTree = "<group>";
+		};
+		72EF56B121B6FA0F0010FD4E /* Idle */ = {
+			isa = PBXGroup;
+			children = (
+				72EF56B221B6FA1A0010FD4E /* L_LLOYD_IDLE.atlas */,
+				54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */,
+			);
+			path = Idle;
+			sourceTree = "<group>";
+		};
+		72EF56B321B6FA280010FD4E /* Walk */ = {
+			isa = PBXGroup;
+			children = (
+				54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */,
+				54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */,
+			);
+			path = Walk;
+			sourceTree = "<group>";
+		};
+		72EF56B421B6FA670010FD4E /* Goku */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Goku;
+			sourceTree = "<group>";
+		};
+		72EF56B521B6FAA20010FD4E /* Samsus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Samsus;
+			sourceTree = "<group>";
+		};
+		72EF56B621B6FAD70010FD4E /* Fox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +377,6 @@
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
-				54529AEF21AF2D9D008E3176 /* L_LLOYD_IDLE.atlas in Resources */,
 				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
 				54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */,
