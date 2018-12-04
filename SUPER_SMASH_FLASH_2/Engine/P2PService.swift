@@ -11,7 +11,7 @@ protocol ColorServiceDelegate {
 class ColorService : NSObject {
     
 /* Service type must be a unique string, at most 15 characters long and can contain only ASCII lowercase letters, numbers and hyphens. The serviceType parameter is a short text string used to describe the app's networking protocol */
-    private let ColorServiceType = "Smash"
+    private let ColorServiceType = "smash"
     //This line makes the persons "username" the name of the device they are using
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     //The MCNearbyServiceAdvertiser class publishes an advertisement for a specific service that your app provides through the Multipeer Connectivity framework and notifies its delegate about invitations from nearby peers

@@ -14,15 +14,15 @@ extension GameScene : ColorServiceDelegate {
     func colorChanged(manager: ColorService, colorString: String) {
         OperationQueue.main.addOperation {
             switch colorString {
-            case "true":
-                
-                self.touch = true
-                self.player.StrafeRight()
-            case "false":
-                self.touch = false
-                self.player.IdleRight()
+            case "NONE":
+                self.Direction = "NONE"
+            case "RIGHT":
+                self.Direction = "RIGHT"
+            case "LEFT":
+                self.Direction = "LEFT"
                 
             default:
+                print ("F U C K T H I S SHOULDNT HAPPEN")
                 NSLog("%@", "Unknown color value received: \(colorString)")
             }
         }
