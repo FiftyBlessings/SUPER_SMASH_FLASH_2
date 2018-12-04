@@ -100,24 +100,30 @@ var touch = false
             if node == DP_E{
                 touch = true
                 Direction = "RIGHT"
+                colorService.send(colorName: Direction)
                 player.StrafeRight()
             } else if node == DP_W {
                 touch = true
                 Direction = "LEFT"
+                colorService.send(colorName: Direction)
                 player.StrafeLeft()
             } else if node == DP_N {
                 player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
+                Direction = "UP"
+                colorService.send(colorName: Direction)
             } else if node == DP_NE {
                 player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
                 touch = true
-                Direction = "RIGHT"
+                Direction = "UP_RIGHT"
+                colorService.send(colorName: Direction)
             } else if node == DP_NW {
                 player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
                 touch = true
-                Direction = "LEFT"
+                Direction = "UP_LEFT"
+                colorService.send(colorName: Direction)
             }
     
         }
@@ -141,7 +147,7 @@ var touch = false
             player.IdleRight()
         }
         Direction = "NONE"
-        colorService.send(colorName: "false")
+        colorService.send(colorName: Direction)
     }
     var lastposition: CGPoint = CGPoint(x: 0, y: 0)
     
