@@ -24,6 +24,8 @@
 		54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */; };
 		54529AF421B052BF008E3176 /* P2P - Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54529AF321B052BF008E3176 /* P2P - Delegate.swift */; };
 		54529AF621B1A726008E3176 /* D-Pad Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54529AF521B1A726008E3176 /* D-Pad Extension.swift */; };
+		54529B1021B83930008E3176 /* UL_LLOYD_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529B0E21B83930008E3176 /* UL_LLOYD_JUMP.atlas */; };
+		54529B1121B83930008E3176 /* UR_LLOYD_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529B0F21B83930008E3176 /* UR_LLOYD_JUMP.atlas */; };
 		5456A9DB21A5D89400806094 /* Animation Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5456A9DA21A5D89400806094 /* Animation Extension.swift */; };
 		54FF04C821A72847003CD040 /* P2PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FF04C721A72847003CD040 /* P2PService.swift */; };
 /* End PBXBuildFile section */
@@ -66,12 +68,14 @@
 		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_WALK.atlas; sourceTree = "<group>"; };
-		54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
+		54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = R_LLOYD_WALK.atlas; path = SUPER_SMASH_FLASH_2/Engine/Walk/R_LLOYD_WALK.atlas; sourceTree = "<group>"; };
 		54529AF321B052BF008E3176 /* P2P - Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "P2P - Delegate.swift"; sourceTree = "<group>"; };
 		54529AF521B1A726008E3176 /* D-Pad Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "D-Pad Extension.swift"; sourceTree = "<group>"; };
+		54529B0E21B83930008E3176 /* UL_LLOYD_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = UL_LLOYD_JUMP.atlas; sourceTree = "<group>"; };
+		54529B0F21B83930008E3176 /* UR_LLOYD_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = UR_LLOYD_JUMP.atlas; sourceTree = "<group>"; };
+		54529B1221B83C78008E3176 /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 		5456A9DA21A5D89400806094 /* Animation Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Extension.swift"; sourceTree = "<group>"; };
 		54FF04C721A72847003CD040 /* P2PService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PService.swift; sourceTree = "<group>"; };
-		72EF56B221B6FA1A0010FD4E /* L_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,12 @@
 				541D091021A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests */,
 				541D091B21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests */,
 				541D08F421A3208200B5F518 /* Products */,
-				541D090821A3208400B5F518 /* Info.plist */,
+				54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */,
+				54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */,
+				54529B1221B83C78008E3176 /* L_LLOYD_IDLE.atlas */,
+				54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */,
+				54529B0E21B83930008E3176 /* UL_LLOYD_JUMP.atlas */,
+				54529B0F21B83930008E3176 /* UR_LLOYD_JUMP.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +132,7 @@
 		541D08F521A3208200B5F518 /* SUPER_SMASH_FLASH_2 */ = {
 			isa = PBXGroup;
 			children = (
+				541D090821A3208400B5F518 /* Info.plist */,
 				543C003A21AF07A2009B78A7 /* Engine */,
 			);
 			path = SUPER_SMASH_FLASH_2;
@@ -231,8 +241,6 @@
 		72EF56B121B6FA0F0010FD4E /* Idle */ = {
 			isa = PBXGroup;
 			children = (
-				72EF56B221B6FA1A0010FD4E /* L_LLOYD_IDLE.atlas */,
-				54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */,
 			);
 			path = Idle;
 			sourceTree = "<group>";
@@ -240,11 +248,12 @@
 		72EF56B321B6FA280010FD4E /* Walk */ = {
 			isa = PBXGroup;
 			children = (
-				54529AED21AF2D9D008E3176 /* L_LLOYD_WALK.atlas */,
-				54529AEE21AF2D9D008E3176 /* R_LLOYD_WALK.atlas */,
 			);
+			indentWidth = 4;
 			path = Walk;
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
 		};
 		72EF56B421B6FA670010FD4E /* Goku */ = {
 			isa = PBXGroup;
@@ -371,11 +380,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54529B1121B83930008E3176 /* UR_LLOYD_JUMP.atlas in Resources */,
 				54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
 				543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */,
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
+				54529B1021B83930008E3176 /* UL_LLOYD_JUMP.atlas in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
 				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
@@ -587,7 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38USN3E3H5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SUPER_SMASH_FLASH_2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -606,7 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38USN3E3H5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SUPER_SMASH_FLASH_2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
