@@ -4,8 +4,9 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     let playerCategory: UInt32 = 0x1 << 0
     let platformCategory: UInt32 = 0x1 << 1
     
-var player = SKSpriteNode()
+
 var platform = SKSpriteNode()
+var player = SKSpriteNode()
 let colorService = ColorService()
     var DP_N = SKSpriteNode()
     var DP_NE = SKSpriteNode()
@@ -17,9 +18,8 @@ let colorService = ColorService()
     var  DP_W = SKSpriteNode()
     var Direction = "NONE"
     
-private var playerWalkingFrames: [SKTexture] = []
-    
     override func didMove(to view: SKView) {
+      
         backgroundColor = .white
         colorService.delegate = self
         physicsWorld.contactDelegate = self
@@ -52,13 +52,21 @@ private var playerWalkingFrames: [SKTexture] = []
         addChild(platform)
     
         addChild(player)
-       player.physicsBody = SKPhysicsBody(circleOfRadius: (player.size.width)/2)
+     
         player.physicsBody?.affectedByGravity = true
   
-        player.position = CGPoint(x: 500, y:200)
+        player.position = CGPoint(x: 370, y:136.174)
         player.physicsBody?.friction = 1000
         player.physicsBody?.restitution = 0
         platform.physicsBody?.restitution = 0
+        
+        var hitbox = SKSpriteNode(imageNamed: "LLYODHitBox")
+   hitbox.isHidden = true
+        
+        player.addChild(hitbox)
+        
+        hitbox.position = CGPoint(x: 7.5, y: 2.326)
+        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
         
       
     }
@@ -91,7 +99,7 @@ var touch = false
     func moveto(_ dircection: CGPoint) {
         
     }
-    
+   
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -160,6 +168,8 @@ var touch = false
         } else if Direction == "UP"{
             
         }
+         player.size = player.texture!.size()
+        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
     }
     
 }
