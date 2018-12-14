@@ -25,7 +25,7 @@ func animateplayer() {
     self.run(SKAction.repeatForever(
         SKAction.animate(with: playerWalkingFrames,
                          timePerFrame: 0.1,
-                         resize: false,
+                         resize: true,
                          restore: true)),
                withKey:"walkingInPlaceplayer")
 }

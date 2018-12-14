@@ -3,13 +3,13 @@ import Foundation
 import AVKit
 
 class GameScene: SKScene , SKPhysicsContactDelegate {
-    let playerCategory: UInt32 = 0x1 << 0
-    let platformCategory: UInt32 = 0x1 << 1
+
     
 
 var platform = SKSpriteNode()
 var player = SKSpriteNode()
 let colorService = ColorService()
+    
     var DP_N = SKSpriteNode()
     var DP_NE = SKSpriteNode()
     var DP_NW = SKSpriteNode()
@@ -19,7 +19,7 @@ let colorService = ColorService()
     var DP_SW = SKSpriteNode()
     var  DP_W = SKSpriteNode()
     var Direction = "NONE"
-    
+
     override func didMove(to view: SKView) {
       
         
@@ -41,22 +41,12 @@ let colorService = ColorService()
          DP_W = self.childNode(withName: "DPAD_W") as! SKSpriteNode
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -4.8)
-
         
-        platform.color = .black
-      buildplayer(Atlas: "R_LLOYD_IDLE")
-    animateplayer()
  
-        platform.position = CGPoint(x: 368, y: -40.5)
-        platform.size = CGSize(width: 736, height: 100)
-        platform.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1500, height: 40))
-        platform.physicsBody?.restitution = 1.1
-        platform.physicsBody?.affectedByGravity = false
-        platform.physicsBody?.allowsRotation = false
-        platform.physicsBody?.pinned = true
+    
         
         
-        addChild(platform)
+        
     
         addChild(player)
      
@@ -67,13 +57,9 @@ let colorService = ColorService()
         player.physicsBody?.restitution = 0
         platform.physicsBody?.restitution = 0
         
-        var hitbox = SKSpriteNode(imageNamed: "LLYODHitBox")
-   hitbox.isHidden = true
-        
-        player.addChild(hitbox)
-        
-        hitbox.position = CGPoint(x: 7.5, y: 2.326)
+
         player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
+        
         
       
     }
@@ -97,7 +83,7 @@ let colorService = ColorService()
         player.run(SKAction.repeatForever(
             SKAction.animate(with: playerWalkingFrames,
                              timePerFrame: 0.1,
-                             resize: false,
+                             resize: true,
                              restore: true)),
                  withKey:"walkingInPlaceplayer")
     }
@@ -105,47 +91,29 @@ var touch = false
    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let smash: SKVideoNode = SKVideoNode(fileNamed: "Intro.mp4")
-        self.addChild(smash)
-        smash.position = CGPoint(x: 368, y: 207)
-        smash.size = CGSize(width: 100, height: 100)
-        smash.play()
+       
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
-            if node == DP_E{
-                touch = true
+            touch = true
+            
+            switch node {
+            case DP_E:
                 Direction = "RIGHT"
-                colorService.send(colorName: Direction)
                 player.StrafeRight()
-            } else if node == DP_W {
-                touch = true
+            case DP_W:
                 Direction = "LEFT"
-                colorService.send(colorName: Direction)
                 player.StrafeLeft()
-            } else if node == DP_N {
-                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
+            case DP_N:
                 Direction = "UP"
-                colorService.send(colorName: Direction)
-            } else if node == DP_NE {
-                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
-                touch = true
-                Direction = "UP_RIGHT"
-                colorService.send(colorName: Direction)
-            } else if node == DP_NW {
-                player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 45))
-                touch = true
-                Direction = "UP_LEFT"
-                colorService.send(colorName: Direction)
+                player.Jump()
+            case DP_S:
+                Direction = "DOWN"
+                player.Duck()
+            default:
+                print("yeet")
             }
-    
+    colorService.send(colorName: Direction)
         }
-        
-        for _ in touches {}
-        touch = true
-        colorService.send(colorName: "true")
     }
     
     
@@ -167,16 +135,19 @@ var touch = false
     var lastposition: CGPoint = CGPoint(x: 0, y: 0)
     
     override func update(_ currentTime: TimeInterval) {
-        if Direction == "RIGHT"{
+        switch Direction {
+        case "RIGHT":
             player.run(SKAction.move(by: CGVector(dx: 3, dy: 0), duration: 0.1))
-            print ("YEET")
-        } else if Direction == "LEFT"{
-           player.run(SKAction.move(by: CGVector(dx: -3, dy: 0), duration: 0.1))
-        } else if Direction == "UP"{
+            player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7, y: 7))
+        case "LEFT":
+            player.run(SKAction.move(by: CGVector(dx: -3, dy: 0), duration: 0.1))
+            player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: -7, y: 7))
+       
             
+        default: break
+         
         }
-//         player.size = player.texture!.size()
-        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
+        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7, y: 7))
     }
     
 }
