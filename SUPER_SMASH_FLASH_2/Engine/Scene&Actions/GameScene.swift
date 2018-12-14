@@ -1,4 +1,6 @@
 import SpriteKit
+import Foundation
+import AVKit
 
 class GameScene: SKScene , SKPhysicsContactDelegate {
     let playerCategory: UInt32 = 0x1 << 0
@@ -20,6 +22,11 @@ let colorService = ColorService()
     
     override func didMove(to view: SKView) {
       
+        
+        
+        
+
+        
         backgroundColor = .white
         colorService.delegate = self
         physicsWorld.contactDelegate = self
@@ -37,8 +44,8 @@ let colorService = ColorService()
 
         
         platform.color = .black
-        buildplayer(Atlas: "R_LLOYD_IDLE")
-        animateplayer()
+      buildplayer(Atlas: "R_LLOYD_IDLE")
+    animateplayer()
  
         platform.position = CGPoint(x: 368, y: -40.5)
         platform.size = CGSize(width: 736, height: 100)
@@ -75,7 +82,7 @@ let colorService = ColorService()
         var walkFrames: [SKTexture] = []
         
         let numImages = playerAnimatedAtlas.textureNames.count
-        for i in 1...numImages {
+          for i in 1...numImages {
             let playerTextureName = "\(Atlas)\(i)"
             walkFrames.append(playerAnimatedAtlas.textureNamed(playerTextureName))
         }
@@ -95,14 +102,14 @@ let colorService = ColorService()
                  withKey:"walkingInPlaceplayer")
     }
 var touch = false
-    
-    func moveto(_ dircection: CGPoint) {
-        
-    }
    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        let smash: SKVideoNode = SKVideoNode(fileNamed: "Intro.mp4")
+        self.addChild(smash)
+        smash.position = CGPoint(x: 368, y: 207)
+        smash.size = CGSize(width: 100, height: 100)
+        smash.play()
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
             if node == DP_E{
@@ -168,7 +175,7 @@ var touch = false
         } else if Direction == "UP"{
             
         }
-         player.size = player.texture!.size()
+//         player.size = player.texture!.size()
         player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
     }
     
