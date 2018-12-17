@@ -18,6 +18,18 @@
 		541D091221A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091121A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift */; };
 		541D091D21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */; };
 		542ED4E921C1763C009F53C5 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 542ED4E821C03866009F53C5 /* Intro.mp4 */; };
+		542ED53D21C812F7009F53C5 /* R_Lloyd_AttackStanding5.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */; };
+		542ED53E21C812F7009F53C5 /* R_Lloyd_AttackStanding4.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */; };
+		542ED53F21C812F7009F53C5 /* R_Lloyd_AttackStanding6.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */; };
+		542ED54021C812F7009F53C5 /* R_Lloyd_AttackStanding3.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */; };
+		542ED54121C812F7009F53C5 /* R_Lloyd_AttackStanding2.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */; };
+		542ED54221C812F7009F53C5 /* R_Lloyd_AttackStanding1.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */; };
+		542ED54321C812F7009F53C5 /* L_Lloyd_AttackStanding2.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */; };
+		542ED54421C812F7009F53C5 /* L_Lloyd_AttackStanding3.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */; };
+		542ED54521C812F7009F53C5 /* L_Lloyd_AttackStanding1.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */; };
+		542ED54621C812F7009F53C5 /* L_Lloyd_AttackStanding4.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */; };
+		542ED54721C812F7009F53C5 /* L_Lloyd_AttackStanding5.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */; };
+		542ED54821C812F7009F53C5 /* L_Lloyd_AttackStanding6.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */; };
 		543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C003821AF0765009B78A7 /* Map Loading Framework.swift */; };
 		543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C003B21AF0806009B78A7 /* Launch Screen.storyboard */; };
 		54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */; };
@@ -67,6 +79,18 @@
 		541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPER_SMASH_FLASH_2UITests.swift; sourceTree = "<group>"; };
 		541D091E21A3208500B5F518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		542ED4E821C03866009F53C5 /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
+		542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding5.png; sourceTree = "<group>"; };
+		542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding4.png; sourceTree = "<group>"; };
+		542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding6.png; sourceTree = "<group>"; };
+		542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding3.png; sourceTree = "<group>"; };
+		542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding2.png; sourceTree = "<group>"; };
+		542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding1.png; sourceTree = "<group>"; };
+		542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding2.png; sourceTree = "<group>"; };
+		542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding3.png; sourceTree = "<group>"; };
+		542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding1.png; sourceTree = "<group>"; };
+		542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding4.png; sourceTree = "<group>"; };
+		542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding5.png; sourceTree = "<group>"; };
+		542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding6.png; sourceTree = "<group>"; };
 		543C003821AF0765009B78A7 /* Map Loading Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Loading Framework.swift"; sourceTree = "<group>"; };
 		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
@@ -154,6 +178,66 @@
 			path = SUPER_SMASH_FLASH_2UITests;
 			sourceTree = "<group>";
 		};
+		542ED52C21C80C56009F53C5 /* Jump */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jump;
+			sourceTree = "<group>";
+		};
+		542ED52D21C812C1009F53C5 /* Movement */ = {
+			isa = PBXGroup;
+			children = (
+				72EF56B321B6FA280010FD4E /* Walk */,
+				542ED52C21C80C56009F53C5 /* Jump */,
+				72EF56B121B6FA0F0010FD4E /* Idle */,
+			);
+			path = Movement;
+			sourceTree = "<group>";
+		};
+		542ED52E21C812E7009F53C5 /* Attacks */ = {
+			isa = PBXGroup;
+			children = (
+				542ED54921C812FB009F53C5 /* Standing */,
+			);
+			path = Attacks;
+			sourceTree = "<group>";
+		};
+		542ED52F21C812F6009F53C5 /* R_Lloyd_AttackStanding */ = {
+			isa = PBXGroup;
+			children = (
+				542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */,
+				542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */,
+				542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */,
+				542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */,
+				542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */,
+				542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */,
+			);
+			path = R_Lloyd_AttackStanding;
+			sourceTree = "<group>";
+		};
+		542ED53621C812F7009F53C5 /* L_Lloyd_AttackStanding */ = {
+			isa = PBXGroup;
+			children = (
+				542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */,
+				542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */,
+				542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */,
+				542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */,
+				542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */,
+				542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */,
+			);
+			path = L_Lloyd_AttackStanding;
+			sourceTree = "<group>";
+		};
+		542ED54921C812FB009F53C5 /* Standing */ = {
+			isa = PBXGroup;
+			children = (
+				542ED52F21C812F6009F53C5 /* R_Lloyd_AttackStanding */,
+				542ED53621C812F7009F53C5 /* L_Lloyd_AttackStanding */,
+			);
+			path = Standing;
+			sourceTree = "<group>";
+		};
 		543C003A21AF07A2009B78A7 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +316,8 @@
 		72EF56AF21B6F9CB0010FD4E /* Lloyd */ = {
 			isa = PBXGroup;
 			children = (
-				72EF56B321B6FA280010FD4E /* Walk */,
-				72EF56B121B6FA0F0010FD4E /* Idle */,
+				542ED52E21C812E7009F53C5 /* Attacks */,
+				542ED52D21C812C1009F53C5 /* Movement */,
 			);
 			name = Lloyd;
 			sourceTree = "<group>";
@@ -387,15 +471,27 @@
 				542ED4E921C1763C009F53C5 /* Intro.mp4 in Resources */,
 				54529B1321B840F3008E3176 /* L_LLOYD_IDLE.atlas in Resources */,
 				54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */,
+				542ED54721C812F7009F53C5 /* L_Lloyd_AttackStanding5.png in Resources */,
+				542ED54421C812F7009F53C5 /* L_Lloyd_AttackStanding3.png in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
 				543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */,
+				542ED54021C812F7009F53C5 /* R_Lloyd_AttackStanding3.png in Resources */,
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
+				542ED54821C812F7009F53C5 /* L_Lloyd_AttackStanding6.png in Resources */,
+				542ED54121C812F7009F53C5 /* R_Lloyd_AttackStanding2.png in Resources */,
+				542ED54521C812F7009F53C5 /* L_Lloyd_AttackStanding1.png in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
+				542ED54621C812F7009F53C5 /* L_Lloyd_AttackStanding4.png in Resources */,
 				54BD803521C027B500E7AAE9 /* mainmenu.sks in Resources */,
 				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
+				542ED53E21C812F7009F53C5 /* R_Lloyd_AttackStanding4.png in Resources */,
+				542ED53F21C812F7009F53C5 /* R_Lloyd_AttackStanding6.png in Resources */,
+				542ED53D21C812F7009F53C5 /* R_Lloyd_AttackStanding5.png in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
 				54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */,
+				542ED54221C812F7009F53C5 /* R_Lloyd_AttackStanding1.png in Resources */,
+				542ED54321C812F7009F53C5 /* L_Lloyd_AttackStanding2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

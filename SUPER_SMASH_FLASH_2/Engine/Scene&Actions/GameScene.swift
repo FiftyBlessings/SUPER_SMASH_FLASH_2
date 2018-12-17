@@ -3,13 +3,10 @@ import Foundation
 import AVKit
 
 class GameScene: SKScene , SKPhysicsContactDelegate {
-
     
-
-var platform = SKSpriteNode()
-var player = SKSpriteNode()
-let colorService = ColorService()
-    
+    let colorService = ColorService()
+    var platform = SKSpriteNode()
+    var player = SKSpriteNode()
     var DP_N = SKSpriteNode()
     var DP_NE = SKSpriteNode()
     var DP_NW = SKSpriteNode()
@@ -18,83 +15,82 @@ let colorService = ColorService()
     var DP_S = SKSpriteNode()
     var DP_SW = SKSpriteNode()
     var  DP_W = SKSpriteNode()
+    var NES_B = SKSpriteNode()
+    var NES_A = SKSpriteNode()
     var Direction = "NONE"
 
     override func didMove(to view: SKView) {
-      
-        
-        
-        
 
-        
         backgroundColor = .white
         colorService.delegate = self
         physicsWorld.contactDelegate = self
         
-         DP_N = self.childNode(withName: "DPAD_N") as! SKSpriteNode
-         DP_NE = self.childNode(withName: "DPAD_NE") as! SKSpriteNode
-         DP_NW = self.childNode(withName: "DPAD_NW") as! SKSpriteNode
-         DP_E = self.childNode(withName: "DPAD_E") as! SKSpriteNode
-         DP_SE = self.childNode(withName: "DPAD_SE") as! SKSpriteNode
-         DP_S = self.childNode(withName: "DPAD_S") as! SKSpriteNode
-         DP_SW = self.childNode(withName: "DPAD_SW") as! SKSpriteNode
-         DP_W = self.childNode(withName: "DPAD_W") as! SKSpriteNode
+        DP_E = self.childNode(withName: "DPAD_E") as! SKSpriteNode
+        DP_N = self.childNode(withName: "DPAD_N") as! SKSpriteNode
+      DP_W = self.childNode(withName: "DPAD_W") as! SKSpriteNode
+    DP_NE = self.childNode(withName: "DPAD_NE") as! SKSpriteNode
+ DP_NW = self.childNode(withName: "DPAD_NW") as! SKSpriteNode
+      DP_SE = self.childNode(withName: "DPAD_SE") as! SKSpriteNode
+           DP_S = self.childNode(withName: "DPAD_S") as! SKSpriteNode
+    DP_SW = self.childNode(withName: "DPAD_SW") as! SKSpriteNode
+        
+    NES_A = self.childNode(withName: "BUTTON_A") as! SKSpriteNode
+    NES_B = self.childNode(withName: "BUTTON_B") as! SKSpriteNode
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -4.8)
         
- 
-    
-        
-        
-        
-    
         addChild(player)
-     
+        player.IdleRight()
+        
+        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
         player.physicsBody?.affectedByGravity = true
-  
-        player.position = CGPoint(x: 370, y:136.174)
         player.physicsBody?.friction = 1000
         player.physicsBody?.restitution = 0
-        platform.physicsBody?.restitution = 0
         
-
-        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7.5, y: 7))
-        
-        
-      
+        player.position = CGPoint(x: 370, y:136.174)
     }
-    func buildplayer(Atlas: String) {
-        let playerAnimatedAtlas = SKTextureAtlas(named: Atlas)
-        var walkFrames: [SKTexture] = []
-        
-        let numImages = playerAnimatedAtlas.textureNames.count
-          for i in 1...numImages {
-            let playerTextureName = "\(Atlas)\(i)"
-            walkFrames.append(playerAnimatedAtlas.textureNamed(playerTextureName))
-        }
-        playerWalkingFrames = walkFrames
-        let firstFrameTexture = playerWalkingFrames[0]
-        player = SKSpriteNode(texture: firstFrameTexture)
-        
-        
-       
-    }
-    func animateplayer() {
-        player.run(SKAction.repeatForever(
-            SKAction.animate(with: playerWalkingFrames,
-                             timePerFrame: 0.1,
-                             resize: true,
-                             restore: true)),
-                 withKey:"walkingInPlaceplayer")
-    }
-var touch = false
-   
+    var touches = touches.first?.location(in: self)
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
+    func figureOutThisFuckery() {
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
-            touch = true
+
+            switch node {
+            case DP_E:
+                Direction = "RIGHT"
+                player.StrafeRight()
+            case DP_W:
+                Direction = "LEFT"
+                player.StrafeLeft()
+            case DP_N:
+                Direction = "UP"
+                player.Jump()
+            case DP_S:
+                Direction = "DOWN"
+                player.Duck()
+            default:
+                print("yeet")
+            }
+            if node == NES_A && Direction == "LEFT"{
+                player.AttackLeft()
+            } else if node == NES_A && Direction == "RIGHT" {
+                player.AttackRight()
+            }
+            colorService.send(colorName: Direction)
+        }
+    
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        figureOutThisFuckery()
+    }
+        
+    
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touchlocation = touches.first?.location(in: self)
+        if let node = self.nodes(at: touchlocation!).first {
+
             
             switch node {
             case DP_E:
@@ -112,13 +108,8 @@ var touch = false
             default:
                 print("yeet")
             }
-    colorService.send(colorName: Direction)
+            colorService.send(colorName: Direction)
         }
-    }
-    
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-   
 }
     
         
@@ -129,8 +120,7 @@ var touch = false
         } else if Direction == "RIGHT" {
             player.IdleRight()
         }
-        Direction = "NONE"
-        colorService.send(colorName: Direction)
+        
     }
     var lastposition: CGPoint = CGPoint(x: 0, y: 0)
     
@@ -147,7 +137,6 @@ var touch = false
         default: break
          
         }
-        player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7, y: 7))
     }
     
 }

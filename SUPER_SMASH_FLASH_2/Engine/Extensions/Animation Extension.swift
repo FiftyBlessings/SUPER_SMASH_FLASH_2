@@ -4,13 +4,10 @@ import SpriteKit
 
 var playerWalkingFrames: [SKTexture] = []
 extension SKSpriteNode {
-    
-
 
     func buildplayer(Atlas: String) {
     let playerAnimatedAtlas = SKTextureAtlas(named: Atlas)
     var walkFrames: [SKTexture] = []
-    
     let numImages = playerAnimatedAtlas.textureNames.count
     for i in 1...numImages {
         let playerTextureName = ("\(Atlas)\(i)")
@@ -58,4 +55,13 @@ func animateplayer() {
         buildplayer(Atlas: "R_LLOYD_IDLE")
         animateplayer()
     }
+    func AttackRight() {
+        buildplayer(Atlas: "R_Lloyd_AttackStanding")
+        animateplayer()
+    }
+    func AttackLeft() {
+        buildplayer(Atlas: "L_Lloyd_AttackStanding")
+        animateplayer()
+    }
+    
 }
