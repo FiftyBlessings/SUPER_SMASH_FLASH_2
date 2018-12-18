@@ -18,50 +18,62 @@ extension SKSpriteNode {
     self.texture = firstFrameTexture
 }
     
-func animateplayer() {
-    self.run(SKAction.repeatForever(
+    func animateplayer(_ Repeats: Bool) {
+        if Repeats == true {
+            self.run(SKAction.repeatForever(
         SKAction.animate(with: playerWalkingFrames,
                          timePerFrame: 0.1,
                          resize: true,
                          restore: true)),
                withKey:"walkingInPlaceplayer")
+        } else if Repeats == false {
+            self.run(
+                SKAction.animate(with: playerWalkingFrames,
+                                 timePerFrame: 0.1,
+                                 resize: true,
+                                 restore: true),
+                     withKey:"walkingInPlaceplayer")
+        }
 }
     func StrafeLeft() {
         buildplayer(Atlas: "L_LLOYD_WALK")
-        animateplayer()
+        animateplayer(true)
     }
     
     func StrafeRight() {
         buildplayer(Atlas: "R_LLOYD_WALK")
-        animateplayer()
+        animateplayer(true)
     }
     
     func Jump() {
-        buildplayer(Atlas: "LLOYD_WALK")
-        animateplayer()
+        buildplayer(Atlas: "UR_LLOYD_JUMP")
+        animateplayer(false)
     }
     
     func Duck() {
         buildplayer(Atlas: "LLOYD_WALK")
-        animateplayer()
+        animateplayer(true)
     }
     
     func IdleLeft() {
         buildplayer(Atlas: "L_LLOYD_IDLE")
-        animateplayer()
+        animateplayer(true)
     }
     
     func IdleRight() {
         buildplayer(Atlas: "R_LLOYD_IDLE")
-        animateplayer()
+        animateplayer(true)
     }
     func AttackRight() {
         buildplayer(Atlas: "R_Lloyd_AttackStanding")
-        animateplayer()
+        animateplayer(false)
     }
     func AttackLeft() {
         buildplayer(Atlas: "L_Lloyd_AttackStanding")
-        animateplayer()
+        animateplayer(false)
+    }
+    func Fall() {
+        
     }
     
 }

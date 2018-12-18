@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5419982521C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982421C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas */; };
+		5419982721C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982621C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas */; };
+		5419982A21C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982821C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas */; };
+		5419982B21C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982921C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas */; };
 		541D08F721A3208200B5F518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D08F621A3208200B5F518 /* AppDelegate.swift */; };
 		541D08F921A3208200B5F518 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 541D08F821A3208200B5F518 /* GameScene.sks */; };
 		541D08FB21A3208200B5F518 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 541D08FA21A3208200B5F518 /* Actions.sks */; };
@@ -18,18 +22,6 @@
 		541D091221A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091121A3208500B5F518 /* SUPER_SMASH_FLASH_2Tests.swift */; };
 		541D091D21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */; };
 		542ED4E921C1763C009F53C5 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 542ED4E821C03866009F53C5 /* Intro.mp4 */; };
-		542ED53D21C812F7009F53C5 /* R_Lloyd_AttackStanding5.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */; };
-		542ED53E21C812F7009F53C5 /* R_Lloyd_AttackStanding4.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */; };
-		542ED53F21C812F7009F53C5 /* R_Lloyd_AttackStanding6.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */; };
-		542ED54021C812F7009F53C5 /* R_Lloyd_AttackStanding3.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */; };
-		542ED54121C812F7009F53C5 /* R_Lloyd_AttackStanding2.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */; };
-		542ED54221C812F7009F53C5 /* R_Lloyd_AttackStanding1.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */; };
-		542ED54321C812F7009F53C5 /* L_Lloyd_AttackStanding2.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */; };
-		542ED54421C812F7009F53C5 /* L_Lloyd_AttackStanding3.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */; };
-		542ED54521C812F7009F53C5 /* L_Lloyd_AttackStanding1.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */; };
-		542ED54621C812F7009F53C5 /* L_Lloyd_AttackStanding4.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */; };
-		542ED54721C812F7009F53C5 /* L_Lloyd_AttackStanding5.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */; };
-		542ED54821C812F7009F53C5 /* L_Lloyd_AttackStanding6.png in Resources */ = {isa = PBXBuildFile; fileRef = 542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */; };
 		543C003921AF0765009B78A7 /* Map Loading Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C003821AF0765009B78A7 /* Map Loading Framework.swift */; };
 		543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C003B21AF0806009B78A7 /* Launch Screen.storyboard */; };
 		54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */; };
@@ -62,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5419982421C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_Lloyd_AttackStanding.atlas; sourceTree = "<group>"; };
+		5419982621C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_Lloyd_AttackStanding.atlas; sourceTree = "<group>"; };
+		5419982821C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = UR_LLOYD_JUMP.atlas; sourceTree = SOURCE_ROOT; };
+		5419982921C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = UL_LLOYD_JUMP.atlas; sourceTree = SOURCE_ROOT; };
 		541D08F321A3208200B5F518 /* SUPER_SMASH_FLASH_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUPER_SMASH_FLASH_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		541D08F621A3208200B5F518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		541D08F821A3208200B5F518 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -79,18 +75,6 @@
 		541D091C21A3208500B5F518 /* SUPER_SMASH_FLASH_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUPER_SMASH_FLASH_2UITests.swift; sourceTree = "<group>"; };
 		541D091E21A3208500B5F518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		542ED4E821C03866009F53C5 /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
-		542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding5.png; sourceTree = "<group>"; };
-		542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding4.png; sourceTree = "<group>"; };
-		542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding6.png; sourceTree = "<group>"; };
-		542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding3.png; sourceTree = "<group>"; };
-		542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding2.png; sourceTree = "<group>"; };
-		542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_Lloyd_AttackStanding1.png; sourceTree = "<group>"; };
-		542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding2.png; sourceTree = "<group>"; };
-		542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding3.png; sourceTree = "<group>"; };
-		542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding1.png; sourceTree = "<group>"; };
-		542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding4.png; sourceTree = "<group>"; };
-		542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding5.png; sourceTree = "<group>"; };
-		542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_Lloyd_AttackStanding6.png; sourceTree = "<group>"; };
 		543C003821AF0765009B78A7 /* Map Loading Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map Loading Framework.swift"; sourceTree = "<group>"; };
 		543C003B21AF0806009B78A7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		54529AEC21AF2D9C008E3176 /* R_LLOYD_IDLE.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_IDLE.atlas; sourceTree = "<group>"; };
@@ -181,6 +165,8 @@
 		542ED52C21C80C56009F53C5 /* Jump */ = {
 			isa = PBXGroup;
 			children = (
+				5419982921C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas */,
+				5419982821C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas */,
 			);
 			path = Jump;
 			sourceTree = "<group>";
@@ -203,37 +189,11 @@
 			path = Attacks;
 			sourceTree = "<group>";
 		};
-		542ED52F21C812F6009F53C5 /* R_Lloyd_AttackStanding */ = {
-			isa = PBXGroup;
-			children = (
-				542ED53021C812F6009F53C5 /* R_Lloyd_AttackStanding5.png */,
-				542ED53121C812F6009F53C5 /* R_Lloyd_AttackStanding4.png */,
-				542ED53221C812F6009F53C5 /* R_Lloyd_AttackStanding6.png */,
-				542ED53321C812F6009F53C5 /* R_Lloyd_AttackStanding3.png */,
-				542ED53421C812F6009F53C5 /* R_Lloyd_AttackStanding2.png */,
-				542ED53521C812F6009F53C5 /* R_Lloyd_AttackStanding1.png */,
-			);
-			path = R_Lloyd_AttackStanding;
-			sourceTree = "<group>";
-		};
-		542ED53621C812F7009F53C5 /* L_Lloyd_AttackStanding */ = {
-			isa = PBXGroup;
-			children = (
-				542ED53721C812F7009F53C5 /* L_Lloyd_AttackStanding2.png */,
-				542ED53821C812F7009F53C5 /* L_Lloyd_AttackStanding3.png */,
-				542ED53921C812F7009F53C5 /* L_Lloyd_AttackStanding1.png */,
-				542ED53A21C812F7009F53C5 /* L_Lloyd_AttackStanding4.png */,
-				542ED53B21C812F7009F53C5 /* L_Lloyd_AttackStanding5.png */,
-				542ED53C21C812F7009F53C5 /* L_Lloyd_AttackStanding6.png */,
-			);
-			path = L_Lloyd_AttackStanding;
-			sourceTree = "<group>";
-		};
 		542ED54921C812FB009F53C5 /* Standing */ = {
 			isa = PBXGroup;
 			children = (
-				542ED52F21C812F6009F53C5 /* R_Lloyd_AttackStanding */,
-				542ED53621C812F7009F53C5 /* L_Lloyd_AttackStanding */,
+				5419982621C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas */,
+				5419982421C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas */,
 			);
 			path = Standing;
 			sourceTree = "<group>";
@@ -469,29 +429,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				542ED4E921C1763C009F53C5 /* Intro.mp4 in Resources */,
+				5419982721C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas in Resources */,
 				54529B1321B840F3008E3176 /* L_LLOYD_IDLE.atlas in Resources */,
 				54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */,
-				542ED54721C812F7009F53C5 /* L_Lloyd_AttackStanding5.png in Resources */,
-				542ED54421C812F7009F53C5 /* L_Lloyd_AttackStanding3.png in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
+				5419982B21C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas in Resources */,
 				543C003C21AF0806009B78A7 /* Launch Screen.storyboard in Resources */,
-				542ED54021C812F7009F53C5 /* R_Lloyd_AttackStanding3.png in Resources */,
 				541D08F921A3208200B5F518 /* GameScene.sks in Resources */,
 				541D090421A3208400B5F518 /* Assets.xcassets in Resources */,
-				542ED54821C812F7009F53C5 /* L_Lloyd_AttackStanding6.png in Resources */,
-				542ED54121C812F7009F53C5 /* R_Lloyd_AttackStanding2.png in Resources */,
-				542ED54521C812F7009F53C5 /* L_Lloyd_AttackStanding1.png in Resources */,
 				541D090721A3208400B5F518 /* LaunchScreen.storyboard in Resources */,
-				542ED54621C812F7009F53C5 /* L_Lloyd_AttackStanding4.png in Resources */,
+				5419982521C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas in Resources */,
 				54BD803521C027B500E7AAE9 /* mainmenu.sks in Resources */,
+				5419982A21C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas in Resources */,
 				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
-				542ED53E21C812F7009F53C5 /* R_Lloyd_AttackStanding4.png in Resources */,
-				542ED53F21C812F7009F53C5 /* R_Lloyd_AttackStanding6.png in Resources */,
-				542ED53D21C812F7009F53C5 /* R_Lloyd_AttackStanding5.png in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
 				54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */,
-				542ED54221C812F7009F53C5 /* R_Lloyd_AttackStanding1.png in Resources */,
-				542ED54321C812F7009F53C5 /* L_Lloyd_AttackStanding2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
