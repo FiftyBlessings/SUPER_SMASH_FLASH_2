@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540551C921CAB25600E796CF /* R_LLOYD_FALLING.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 540551C721CAB25600E796CF /* R_LLOYD_FALLING.atlas */; };
+		540551CA21CAB25600E796CF /* L_LLOYD_FALLING.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 540551C821CAB25600E796CF /* L_LLOYD_FALLING.atlas */; };
 		5419982521C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982421C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas */; };
 		5419982721C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982621C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas */; };
 		5419982A21C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5419982821C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540551C721CAB25600E796CF /* R_LLOYD_FALLING.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_LLOYD_FALLING.atlas; sourceTree = "<group>"; };
+		540551C821CAB25600E796CF /* L_LLOYD_FALLING.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_LLOYD_FALLING.atlas; sourceTree = "<group>"; };
 		5419982421C96A3C00D5E033 /* R_Lloyd_AttackStanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_Lloyd_AttackStanding.atlas; sourceTree = "<group>"; };
 		5419982621C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_Lloyd_AttackStanding.atlas; sourceTree = "<group>"; };
 		5419982821C96B2D00D5E033 /* UR_LLOYD_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = UR_LLOYD_JUMP.atlas; sourceTree = SOURCE_ROOT; };
@@ -114,6 +118,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540551C621CAB18E00E796CF /* Falling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Falling;
+			sourceTree = "<group>";
+		};
 		541D08EA21A3208200B5F518 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +185,9 @@
 		542ED52D21C812C1009F53C5 /* Movement */ = {
 			isa = PBXGroup;
 			children = (
+				540551C621CAB18E00E796CF /* Falling */,
+				540551C821CAB25600E796CF /* L_LLOYD_FALLING.atlas */,
+				540551C721CAB25600E796CF /* R_LLOYD_FALLING.atlas */,
 				72EF56B321B6FA280010FD4E /* Walk */,
 				542ED52C21C80C56009F53C5 /* Jump */,
 				72EF56B121B6FA0F0010FD4E /* Idle */,
@@ -431,6 +445,7 @@
 				542ED4E921C1763C009F53C5 /* Intro.mp4 in Resources */,
 				5419982721C96A5200D5E033 /* L_Lloyd_AttackStanding.atlas in Resources */,
 				54529B1321B840F3008E3176 /* L_LLOYD_IDLE.atlas in Resources */,
+				540551C921CAB25600E796CF /* R_LLOYD_FALLING.atlas in Resources */,
 				54529AF221AF2D9D008E3176 /* R_LLOYD_WALK.atlas in Resources */,
 				541D090221A3208200B5F518 /* Main.storyboard in Resources */,
 				5419982B21C96B2D00D5E033 /* UL_LLOYD_JUMP.atlas in Resources */,
@@ -444,6 +459,7 @@
 				54529AF121AF2D9D008E3176 /* L_LLOYD_WALK.atlas in Resources */,
 				541D08FB21A3208200B5F518 /* Actions.sks in Resources */,
 				54529AF021AF2D9D008E3176 /* R_LLOYD_IDLE.atlas in Resources */,
+				540551CA21CAB25600E796CF /* L_LLOYD_FALLING.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

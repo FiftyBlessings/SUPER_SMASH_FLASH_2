@@ -11,6 +11,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     var NES_B = SKSpriteNode(); var NES_A = SKSpriteNode();
     var DP_N = SKSpriteNode(); var DP_NE = SKSpriteNode();
     var DP_SE = SKSpriteNode(); var DP_S = SKSpriteNode();
+    var InputDetected = false
     
     var Direction = "NONE"
     
@@ -20,7 +21,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         player.physicsBody?.friction = 1000
         player.physicsBody?.restitution = 0
         player.position = CGPoint(x: 370, y:136.174)
-        player.IdleRight()
+        player.Idle("RIGHT")
+        Direction = "RIGHT"
         addChild(player)
     }
     
@@ -46,32 +48,37 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         
             switch node {
             case DP_E: Direction = "RIGHT"
-                player.StrafeRight()
+                player.Strafe(Direction)
             case DP_W: Direction = "LEFT"
-                player.StrafeLeft()
-            case DP_N: Direction = "UP"
-                player.Jump()
-            case DP_S: Direction = "DOWN"
-                player.Duck()
-            case DP_NE: Direction = "UPRIGHT"
-                player.Jump()
-            case DP_NW: Direction = "UPLEFT"
-                player.Jump()
-            case DP_SE: Direction = "DOWNRIGHT"
-                player.Duck()
-            case DP_SW: Direction = "DOWNLEFT"
-               player.Duck()
-            default: print("yeet")
+                player.Strafe(Direction)
+            case DP_N:
+                player.Jump(Direction)
+            case DP_S:
+                player.Duck(Direction)
+            case DP_NE: Direction = "RIGHT"
+                player.Jump(Direction)
+            case DP_NW: Direction = "LEFT"
+                player.Jump(Direction)
+            case DP_SE: Direction = "RIGHT"
+                player.Duck(Direction)
+            case DP_SW: Direction = "LEFT"
+               player.Duck(Direction)
+            case NES_A:
+                InputDetected = false
+                player.Attack(Direction)
+            case NES_B:
+                InputDetected = false
+                player.action(forKey: "LLOYD")?.speed = 0
+            default: InputDetected = false
+                
+               
             }
-            if node == NES_A && Direction == "LEFT"{
-                player.AttackLeft()
-    } else if node == NES_A && Direction == "RIGHT" {
-                player.AttackRight()
-            }
+        
             colorService.send(colorName: Direction)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        InputDetected = true
         let touchlocation = touches.first?.location(in: self)
         if let node = self.nodes(at: touchlocation!).first {
             figureOutThisFuckery(node, character: 1)}
@@ -81,9 +88,20 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
         if let node = self.nodes(at: touchlocation!).first {
             figureOutThisFuckery(node, character: 1)}
         }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        InputDetected = false
+    }
     
     func ThatBoiFallin() -> Bool {
-        if lastlocation.x > player.position.x {
+        if lastlocation.y > player.position.y {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func OhMyLordHeDead() -> Bool {
+        if lastlocation == player.position {
             return true
         } else {
             return false
@@ -91,6 +109,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        if InputDetected {
+        
         switch Direction {
         case "RIGHT":
             player.run(SKAction.move(by: CGVector(dx: 3, dy: 0), duration: 0.1))
@@ -105,14 +125,20 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
             player.physicsBody?.applyImpulse(CGVector(dx: 100, dy: 100))
             player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7, y: 7))
         case "UPLEFT":
-            player.physicsBody?.applyForce(CGVector(dx: -100, dy: 100))
             player.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 30, height: 50), center: CGPoint(x: 7, y: 7))
+            player.physicsBody?.applyForce(CGVector(dx: -100, dy: 100))
         default: break
-        }
-        if ThatBoiFallin() {
-            player.
+            }
+            
         }
         
+        if ThatBoiFallin() {
+            player.Fall(Direction)
+        }
+        if OhMyLordHeDead() {
+            player.Idle(Direction)
+        }
+        lastlocation = player.position
     }
     
 
