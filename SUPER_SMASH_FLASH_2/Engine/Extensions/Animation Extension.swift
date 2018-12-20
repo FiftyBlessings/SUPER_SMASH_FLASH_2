@@ -18,75 +18,75 @@ extension SKSpriteNode {
     self.texture = firstFrameTexture
 }
     
-    func animateplayer(_ Repeats: Bool) {
+    func animateplayer(_ Repeats: Bool, key: String) {
         if Repeats == true {
             self.run(SKAction.repeatForever(
         SKAction.animate(with: playerWalkingFrames,
                          timePerFrame: 0.1,
                          resize: true,
                          restore: true)),
-               withKey:"LLOYD")
+               withKey:(key))
         } else if Repeats == false {
             self.run(
                 SKAction.animate(with: playerWalkingFrames,
                                  timePerFrame: 0.1,
                                  resize: true,
                                  restore: true),
-                     withKey:"walkingInPlaceplayer")
+                     withKey:(key))
         }
 }
         func Strafe(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "R_LLOYD_WALK")
-            animateplayer(true)
+            animateplayer(true, key: "WALK")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "L_LLOYD_WALK")
-            animateplayer(true)
+            animateplayer(true, key: "WALK")
         }
     }
         func Jump(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "UR_LLOYD_JUMP")
-            animateplayer(false)
+            animateplayer(false, key: "JUMP")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "UL_LLOYD_JUMP")
-            animateplayer(false)
+            animateplayer(false, key: "JUMP")
         }
     }
         func Duck(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "R_LLOYD_DUCK")
-            animateplayer(true)
+            animateplayer(true, key: "DUCK")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "L_LLOYD_DUCK")
-            animateplayer(true)
+            animateplayer(true, key: "DUCK")
             }
     }
     func Idle(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "R_LLOYD_IDLE")
-            animateplayer(true)
+            animateplayer(true, key: "IDLE")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "L_LLOYD_IDLE")
-            animateplayer(true)
+            animateplayer(true, key: "IDLE")
         }
     }
     func Attack(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "R_Lloyd_AttackStanding")
-            animateplayer(false)
+            animateplayer(false, key: "ATTACK")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "L_Lloyd_AttackStanding")
-            animateplayer(false)
+            animateplayer(false, key: "ATTACK")
         }
     }
     func Fall(_ Direction: String) {
         if Direction == "RIGHT" {
             buildplayer(Atlas: "R_LLOYD_FALLING")
-            animateplayer(true)
+            animateplayer(true, key: "FALL")
         } else if Direction == "LEFT" {
             buildplayer(Atlas: "L_LLOYD_FALLING")
-            animateplayer(true)
+            animateplayer(true, key: "FALL")
         }
     }
 }
