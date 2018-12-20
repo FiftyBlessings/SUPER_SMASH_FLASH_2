@@ -46,10 +46,10 @@ extension SKSpriteNode {
     }
         func Jump(_ Direction: String) {
         if Direction == "RIGHT" {
-            buildplayer(Atlas: "UR_LLOYD_JUMP")
+            buildplayer(Atlas: "R_LLOYD_JUMP")
             animateplayer(false, key: "JUMP")
         } else if Direction == "LEFT" {
-            buildplayer(Atlas: "UL_LLOYD_JUMP")
+            buildplayer(Atlas: "L_LLOYD_JUMP")
             animateplayer(false, key: "JUMP")
         }
     }
