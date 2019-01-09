@@ -53,6 +53,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
     }
     
     func figureOutThisFuckery(_ node: SKNode , character: Int) {
+
         alreadyidling = false
             switch node {
             case DP_E: Direction = "RIGHT"
@@ -65,6 +66,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
                 jump = true
             case DP_S:
                 player.Duck(Direction)
+                InputDetected = false
+
             case DP_NE: Direction = "RIGHT"
                 player.Jump(Direction)
                 jump = true
@@ -73,8 +76,10 @@ class GameScene: SKScene , SKPhysicsContactDelegate {
                 jump = true
             case DP_SE: Direction = "RIGHT"
                 player.Duck(Direction)
+                InputDetected = false
             case DP_SW: Direction = "LEFT"
                player.Duck(Direction)
+                InputDetected = false
             case NES_A:
                 InputDetected = false
                 player.Attack(Direction)

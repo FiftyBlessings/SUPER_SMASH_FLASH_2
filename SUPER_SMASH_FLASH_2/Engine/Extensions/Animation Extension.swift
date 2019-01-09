@@ -55,10 +55,10 @@ extension SKSpriteNode {
     }
         func Duck(_ Direction: String) {
         if Direction == "RIGHT" {
-            buildplayer(Atlas: "R_LLOYD_DUCK")
+            buildplayer(Atlas: "R_Lloyd_down")
             animateplayer(true, key: "DUCK")
         } else if Direction == "LEFT" {
-            buildplayer(Atlas: "L_LLOYD_DUCK")
+            buildplayer(Atlas: "L_Lloyd_down")
             animateplayer(true, key: "DUCK")
             }
     }
