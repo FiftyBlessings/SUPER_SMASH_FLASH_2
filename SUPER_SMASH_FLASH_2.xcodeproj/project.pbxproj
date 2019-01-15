@@ -81,6 +81,12 @@
 		54F0F82D21E7C24E008D078C /* R_GOKU_WALK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F82B21E7C24E008D078C /* R_GOKU_WALK.atlas */; };
 		54F0F83021E7C42F008D078C /* R_GOKU_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F82E21E7C42F008D078C /* R_GOKU_JUMP.atlas */; };
 		54F0F83121E7C42F008D078C /* L_GOKU_JUMP.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F82F21E7C42F008D078C /* L_GOKU_JUMP.atlas */; };
+		54F0F86D21ECF65A008D078C /* LOBBIES.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F86C21ECF65A008D078C /* LOBBIES.sks */; };
+		54F0F86F21ECF8E1008D078C /* LOBBIES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0F86E21ECF8E1008D078C /* LOBBIES.swift */; };
+		54F0F87121ECFDF6008D078C /* HOST.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F87021ECFDF6008D078C /* HOST.sks */; };
+		54F0F87321ECFE04008D078C /* JOIN.sks in Resources */ = {isa = PBXBuildFile; fileRef = 54F0F87221ECFE04008D078C /* JOIN.sks */; };
+		54F0F87521ECFECB008D078C /* HOST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0F87421ECFECB008D078C /* HOST.swift */; };
+		54F0F87721ECFEDE008D078C /* JOIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0F87621ECFEDE008D078C /* JOIN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +190,12 @@
 		54F0F82B21E7C24E008D078C /* R_GOKU_WALK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_GOKU_WALK.atlas; sourceTree = "<group>"; };
 		54F0F82E21E7C42F008D078C /* R_GOKU_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = R_GOKU_JUMP.atlas; sourceTree = "<group>"; };
 		54F0F82F21E7C42F008D078C /* L_GOKU_JUMP.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = L_GOKU_JUMP.atlas; sourceTree = "<group>"; };
+		54F0F86C21ECF65A008D078C /* LOBBIES.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LOBBIES.sks; sourceTree = "<group>"; };
+		54F0F86E21ECF8E1008D078C /* LOBBIES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOBBIES.swift; sourceTree = "<group>"; };
+		54F0F87021ECFDF6008D078C /* HOST.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HOST.sks; sourceTree = "<group>"; };
+		54F0F87221ECFE04008D078C /* JOIN.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = JOIN.sks; sourceTree = "<group>"; };
+		54F0F87421ECFECB008D078C /* HOST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOST.swift; sourceTree = "<group>"; };
+		54F0F87621ECFEDE008D078C /* JOIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JOIN.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,7 +554,6 @@
 		54F0F7E021E7AFDF008D078C /* Multipeer */ = {
 			isa = PBXGroup;
 			children = (
-				54F0F7E121E7AFDF008D078C /* P2PService.swift */,
 				54F0F7E221E7AFDF008D078C /* P2P - Delegate.swift */,
 			);
 			path = Multipeer;
@@ -554,6 +565,7 @@
 				54F0F7E421E7AFDF008D078C /* GameViewController.swift */,
 				54F0F7E521E7AFDF008D078C /* GameScene.sks */,
 				54F0F7E621E7AFDF008D078C /* GameScene.swift */,
+				54F0F7E121E7AFDF008D078C /* P2PService.swift */,
 			);
 			path = "Scene&Actions";
 			sourceTree = "<group>";
@@ -578,8 +590,14 @@
 		54F0F7F121E7AFDF008D078C /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				54F0F7F221E7AFDF008D078C /* MainMenu.sks */,
 				54F0F7F321E7AFDF008D078C /* MainMenu.swift */,
+				54F0F7F221E7AFDF008D078C /* MainMenu.sks */,
+				54F0F86E21ECF8E1008D078C /* LOBBIES.swift */,
+				54F0F86C21ECF65A008D078C /* LOBBIES.sks */,
+				54F0F87421ECFECB008D078C /* HOST.swift */,
+				54F0F87021ECFDF6008D078C /* HOST.sks */,
+				54F0F87621ECFEDE008D078C /* JOIN.swift */,
+				54F0F87221ECFE04008D078C /* JOIN.sks */,
 				54F0F7F421E7AFDF008D078C /* MapScene.sks */,
 				54F0F7F521E7AFDF008D078C /* SelectionScene.sks */,
 				54F0F7F621E7AFDF008D078C /* MapScene.swift */,
@@ -731,6 +749,7 @@
 				54F0F80821E7AFDF008D078C /* SelectionScene.sks in Resources */,
 				54F0F7AF21E7AE92008D078C /* 40.png in Resources */,
 				54F0F73C21E7AD1E008D078C /* PlayerOne.png in Resources */,
+				54F0F87121ECFDF6008D078C /* HOST.sks in Resources */,
 				54F0F81221E7B24C008D078C /* L_LLOYD_IDLE.atlas in Resources */,
 				54F0F80B21E7AFDF008D078C /* Launch Screen.storyboard in Resources */,
 				54F0F7FD21E7AFDF008D078C /* GameScene.sks in Resources */,
@@ -741,6 +760,7 @@
 				54F0F7B021E7AE92008D078C /* MapMask.png in Resources */,
 				54F0F74421E7AD1E008D078C /* SSFBack.png in Resources */,
 				54F0F7BB21E7AE92008D078C /* TempleMask5.png in Resources */,
+				54F0F86D21ECF65A008D078C /* LOBBIES.sks in Resources */,
 				54F0F73E21E7AD1E008D078C /* PlayerThree.png in Resources */,
 				54F0F81721E7C08C008D078C /* L_GOKU_IDLE.atlas in Resources */,
 				54F0F7D621E7AEAF008D078C /* L_LLOYD_WALK.atlas in Resources */,
@@ -748,6 +768,7 @@
 				54F0F7B221E7AE92008D078C /* TempleMask1.png in Resources */,
 				54F0F7BC21E7AE92008D078C /* BackgroundTemple.png in Resources */,
 				54F0F7BF21E7AE92008D078C /* 68.png in Resources */,
+				54F0F87321ECFE04008D078C /* JOIN.sks in Resources */,
 				54F0F7B821E7AE92008D078C /* 64.png in Resources */,
 				54F0F74121E7AD1E008D078C /* Parrallelogram.png in Resources */,
 				54F0F7BD21E7AE92008D078C /* TempleMask8.png in Resources */,
@@ -784,11 +805,14 @@
 				54F0F7FA21E7AFDF008D078C /* P2PService.swift in Sources */,
 				54F0F80A21E7AFDF008D078C /* SelectionScene.swift in Sources */,
 				54F0F80221E7AFDF008D078C /* Animation Extension.swift in Sources */,
+				54F0F86F21ECF8E1008D078C /* LOBBIES.swift in Sources */,
+				54F0F87721ECFEDE008D078C /* JOIN.swift in Sources */,
 				54F0F7FC21E7AFDF008D078C /* GameViewController.swift in Sources */,
 				54F0F80621E7AFDF008D078C /* MainMenu.swift in Sources */,
 				54F0F80421E7AFDF008D078C /* Map Loading Framework.swift in Sources */,
 				54F0F80321E7AFDF008D078C /* D-Pad Extension.swift in Sources */,
 				54F0F80921E7AFDF008D078C /* MapScene.swift in Sources */,
+				54F0F87521ECFECB008D078C /* HOST.swift in Sources */,
 				54F0F7FE21E7AFDF008D078C /* GameScene.swift in Sources */,
 				54F0F7FB21E7AFDF008D078C /* P2P - Delegate.swift in Sources */,
 			);
