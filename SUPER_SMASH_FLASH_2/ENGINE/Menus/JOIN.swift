@@ -45,8 +45,6 @@ class JOIN: SKScene {
     private var label : SKLabelNode?
     override func didMove(to view: SKView) {
         
-        ColorService.
-        
         
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
